@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Ярослав Семенченко](https://up.htmlacademy.ru/adaptive/16/user/146834).
-* Наставник: `Неизвестно`.
+* Наставник: [Елена Арутюнян](https://htmlacademy.ru/profile/id106442).
 
 ---
 
