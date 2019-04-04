@@ -2,9 +2,121 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
   </head>
   <body>
-
+    <header class="main-header">
+      <!-- Блок навигации по сайту -->
+      <nav class="main-navigation visually-hidden">
+        <!-- Блок для бургера -->
+        <div class="site-navigation">
+          <ul class="site-navigation__list menu-list">
+            <li class="menu-list__item">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="menu-list__item">
+              <a href="photo.html">Фото и видео</a>
+            </li>
+            <li class="menu-list__item">
+              <a href="form.html">Форма отзыва</a>
+            </li>
+            <li class="menu-list__item">
+              <a href="https://htmlacademy.ru/intensive/adaptive">Html academy</a>
+            </li>
+          </ul>
+          <button class="site-navigation__close" type="button" name="close-menu">Закрыть меню</button>
+        </div>
+        <!-- Лого и кнопка бургера -->
+        <div class="overt-navigation">
+          <a class="overt-navigation__logo" href="#">
+            <img src="img/logo-mobile.svg" alt="Логотип Седона" width="102" height="83">
+          </a>
+          <button class="overt-navigation__open-menu" type="button" name="open-menu">Открыть меню</button>
+        </div>
+      </nav>
+      <!-- Большая картинка под меню -->
+      <div class="header-img">
+        <img src="img/logo-preview-inside-page.png" alt="Седона" width="229" height="39">
+      </div>
+    </header>
+    <!-- Форма -->
+    <main class="photo-video">
+      <h1 class="photo-video__title">Фото и видео</h1>
+      <p class="photo-video__intro">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+      <section class="photo">
+        <ul class="photo__list">
+          <li class="photo__item single-photo">
+            <figure class="single-photo__wrapper">
+              <img class="single-photo__image" src="img/photo-1-mobile.jpg" alt="Неродные просторы" width="280" height="280">
+              <figcaption class="single-photo__caption">Неродные просторы</figcaption>
+              <span class="single-photo__autor">Автор фото: Борис</span>
+              <a class="single-photo__like-wrapper" href="#">
+                <span class="single-photo__like"></span>
+                <span class="single-photo__like-counter">1350</span>
+              </a>
+            </figure>
+          </li>
+          <li class="photo__item single-photo">
+            <figure class="single-photo__wrapper">
+              <img class="single-photo__image" src="img/photo-2-mobile.jpg" alt="Местная растительность" width="280" height="280">
+              <figcaption class="single-photo__caption">Местная растительность</figcaption>
+              <span class="single-photo__autor">Автор фото: Сергей</span>
+              <a class="single-photo__like-wrapper" href="#">
+                <span class="single-photo__like"></span>
+                <span class="single-photo__like-counter">143</span>
+              </a>
+            </figure>
+          </li>
+          <li class="photo__item single-photo">
+            <figure class="single-photo__wrapper">
+              <img class="single-photo__image" src="img/photo-3-mobile.jpg" alt="Дорога на север" width="280" height="280">
+              <figcaption class="single-photo__caption">Дорога на север</figcaption>
+              <span class="single-photo__autor">Автор фото: Петр</span>
+              <a class="single-photo__like-wrapper" href="#">
+                <span class="single-photo__like"></span>
+                <span class="single-photo__like-counter">96</span>
+              </a>
+            </figure>
+          </li>
+          <li class="photo__item single-photo">
+            <figure class="single-photo__wrapper">
+              <img class="single-photo__image" src="img/photo-4-mobile.jpg" alt="Мост дьявола" width="280" height="280">
+              <figcaption class="single-photo__caption">Мост дьявола</figcaption>
+              <span class="single-photo__autor">Автор фото: Антон</span>
+              <a class="single-photo__like-wrapper" href="#">
+                <span class="single-photo__like"></span>
+                <span class="single-photo__like-counter">254</span>
+              </a>
+            </figure>
+          </li>
+        </ul>
+      </section>
+      <!-- Текст перед видеоблоком -->
+      <aside class="video">
+        <!-- Видео. Сверстать после проверки остальной верстки -->
+      </aside>
+    </main>
+    <!-- Подвал -->
+    <footer class="main-footer">
+      <b class="main-footer__hashtag">#visitsedona</b>
+      <div class="main-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link--twitter" href="#">Мы в Твиттере</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link--facebook" href="#">Мы на Фейсбуке</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link--youtube" href="#">Мы на Ютубе</a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-footer__copyright copyright">
+        <p class="copyright__text">Разработано
+          <span class="visually-hidden">Htmlacademy</span></p>
+      </div>
+    </footer>
   </body>
 </html>
