@@ -8,28 +8,28 @@
   <body>
     <header class="main-header">
       <!-- Блок навигации по сайту -->
-      <nav class="main-navigation visually-hidden">
+      <nav class="main-navigation">
         <!-- Блок для бургера -->
-        <div class="site-navigation">
-          <ul class="site-navigation__list menu-list">
+        <div class="site-menu">
+          <ul class="site-menu__list menu-list">
             <li class="menu-list__item">
-              <a href="index.html">Главная</a>
+              <a class="menu-list__link" href="index.html">Главная</a>
             </li>
             <li class="menu-list__item">
-              <a href="photo.html">Фото и видео</a>
+              <a class="menu-list__link" href="#">Фото и видео</a>
             </li>
             <li class="menu-list__item">
-              <a href="form.html">Форма отзыва</a>
+              <a class="menu-list__link" href="form.html">Форма отзыва</a>
             </li>
             <li class="menu-list__item">
-              <a href="https://htmlacademy.ru/intensive/adaptive">Html academy</a>
+              <a class="menu-list__link" href="https://htmlacademy.ru/intensive/adaptive">Html academy</a>
             </li>
           </ul>
-          <button class="site-navigation__close" type="button" name="close-menu">Закрыть меню</button>
+          <button class="site-menu__close" type="button" name="close-menu">Закрыть меню</button>
         </div>
         <!-- Лого и кнопка бургера -->
         <div class="overt-navigation">
-          <a class="overt-navigation__logo" href="#">
+          <a class="overt-navigation__logo" href="index.html">
             <img src="img/logo-mobile.svg" alt="Логотип Седона" width="102" height="83">
           </a>
           <button class="overt-navigation__open-menu" type="button" name="open-menu">Открыть меню</button>
@@ -45,6 +45,7 @@
       <h1 class="photo-video__title">Фото и видео</h1>
       <p class="photo-video__intro">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
       <section class="photo">
+        <h2 class="photo__title visually-hidden">Фото</h2>
         <ul class="photo__list">
           <li class="photo__item single-photo">
             <figure class="single-photo__wrapper">
@@ -94,6 +95,7 @@
       </section>
       <!-- Текст перед видеоблоком -->
       <aside class="video">
+        <h2 class="video__title visually-hidden">Видео</h2>
         <!-- Видео. Сверстать после проверки остальной верстки -->
       </aside>
     </main>
@@ -103,13 +105,13 @@
       <div class="main-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link--twitter" href="#">Мы в Твиттере</a>
+            <a class="social__link social__link--twitter" href="#">Мы в Твиттере</a>
           </li>
           <li class="social__item">
-            <a class="social__link--facebook" href="#">Мы на Фейсбуке</a>
+            <a class="social__link social__link--facebook" href="#">Мы на Фейсбуке</a>
           </li>
           <li class="social__item">
-            <a class="social__link--youtube" href="#">Мы на Ютубе</a>
+            <a class="social__link social__link--youtube" href="#">Мы на Ютубе</a>
           </li>
         </ul>
       </div>

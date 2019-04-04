@@ -8,28 +8,28 @@
   <body>
     <header class="main-header">
       <!-- Блок навигации по сайту -->
-      <nav class="main-navigation visually-hidden">
+      <nav class="main-navigation">
         <!-- Блок для бургера -->
-        <div class="site-navigation">
-          <ul class="site-navigation__list menu-list">
+        <div class="site-menu">
+          <ul class="site-menu__list menu-list">
             <li class="menu-list__item">
-              <a href="index.html">Главная</a>
+              <a class="menu-list__link" href="index.html">Главная</a>
             </li>
             <li class="menu-list__item">
-              <a href="photo.html">Фото и видео</a>
+              <a class="menu-list__link" href="photo.html">Фото и видео</a>
             </li>
             <li class="menu-list__item">
-              <a href="form.html">Форма отзыва</a>
+              <a class="menu-list__link" href="#">Форма отзыва</a>
             </li>
             <li class="menu-list__item">
-              <a href="https://htmlacademy.ru/intensive/adaptive">Html academy</a>
+              <a class="menu-list__link" href="https://htmlacademy.ru/intensive/adaptive">Html academy</a>
             </li>
           </ul>
-          <button class="site-navigation__close" type="button" name="close-menu">Закрыть меню</button>
+          <button class="site-menu__close" type="button" name="close-menu">Закрыть меню</button>
         </div>
         <!-- Лого и кнопка бургера -->
         <div class="overt-navigation">
-          <a class="overt-navigation__logo" href="#">
+          <a class="overt-navigation__logo" href="index.html">
             <img src="img/logo-mobile.svg" alt="Логотип Седона" width="102" height="83">
           </a>
           <button class="overt-navigation__open-menu" type="button" name="open-menu">Открыть меню</button>
@@ -44,7 +44,7 @@
     <main class="main-form">
       <h1 class="main-form__title">Оставьте свой отзыв</h1>
       <p class="main-form__intro">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-      <section class="form-block">
+      <section class="form-wrapper">
         <form class="form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="form__block form-section">
             <legend class="form-section__legend">Представьтесь:</legend>
@@ -116,8 +116,8 @@
           </fieldset>
           <fieldset class="form__block form-section">
             <p class="form-section__comment">
-              <label for="comment">Опишите свои эмоции:</label>
-              <textarea name="comment" id="comment" cols="30" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
+              <label class="form-section__comment-title" for="comment">Опишите свои эмоции:</label>
+              <textarea class="form-section__comment-field" name="comment" id="comment" cols="30" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
             </p>
           </fieldset>
           <button class="form__button button" type="submit" name="button">Отправить отзыв</button>
@@ -130,13 +130,13 @@
       <div class="main-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link--twitter" href="#">Мы в Твиттере</a>
+            <a class="social__link social__link--twitter" href="#">Мы в Твиттере</a>
           </li>
           <li class="social__item">
-            <a class="social__link--facebook" href="#">Мы на Фейсбуке</a>
+            <a class="social__link social__link--facebook" href="#">Мы на Фейсбуке</a>
           </li>
           <li class="social__item">
-            <a class="social__link--youtube" href="#">Мы на Ютубе</a>
+            <a class="social__link social__link--youtube" href="#">Мы на Ютубе</a>
           </li>
         </ul>
       </div>
@@ -148,8 +148,8 @@
     <!-- Модалки -->
     <section class="modal-error visually-hidden">
       <h2 class="modal-error__title">Что-то пошло не так!</h2>
-      <p class="modal-erroe__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <a class="modal-erroe__button button" href="#">ок</a>
+      <p class="modal-error__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <a class="modal-error__button button" href="#">ок</a>
     </section>
     <section class="modal-ok visually-hidden">
       <h2 class="modal-ok__title">Ваш отзыв отправлен!</h2>
