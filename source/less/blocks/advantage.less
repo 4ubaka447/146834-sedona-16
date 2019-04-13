@@ -1,0 +1,32 @@
+.advantage {
+  background-color: @bg-blue;
+  color: @font-white;
+
+  &::after {
+    display: block;
+    margin: 0 auto;
+    content: "";
+    background-image: url("../img/main-city-mobile@1x.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 260px;
+  }
+}
+
+.advantage--img {
+  &::after {
+    background-image: url("../img/main-bridge-mobile@1x.jpg");
+  }
+}
+
+.advantage__title {
+  margin: 0 20px;
+}
+
+.advantage__number {
+  line-height: 21px;
+}
+
+.advantage__text {
+  margin: 0 20px;
+}
