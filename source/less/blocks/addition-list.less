@@ -2,6 +2,18 @@
   list-style: none;
   margin: 0;
   padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    width: @tablet-width;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    width: @desktop-width;
+    margin: 0 auto;
+  }
 }
 
 .addition-list__item {

@@ -1,10 +1,39 @@
 .header-img {
-  text-align: center;
-  padding-top: 90px;
-  padding-bottom: 85px;
   background-color: @bg-blue-under;
-  background-position: center;
+  background-position: top;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+  }
+}
+
+.header-img__mask {
+  text-align: center;
+  padding-top: 90px;
+  padding-bottom: 85px;
+  background-image: url("../img/bg-intro-triangle-mobile.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  // 101% - потому что без этого какой-то глюк в хроме,
+  // появляются боковые полосочки на мобильной версии
+  background-size: 102% auto;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 77px;
+    padding-bottom: 91px;
+    background-image: url("../img/bg-intro-triangle-tablet.svg");
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 78px;
+    padding-bottom: 90px;
+    background-image: url("../img/bg-intro-triangle-desktop.svg");
+  }
 }
