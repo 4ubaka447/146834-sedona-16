@@ -1,15 +1,48 @@
 .overt-navigation {
   position: relative;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+  }
 }
 
 .overt-navigation__logo {
   display: block;
   margin-bottom: -20px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 0;
+    /* 51px - половина ширины логотипа */
+    left: calc(50% - 51px);
+  }
 }
 
 .overt-navigation__menu-toggle {
   position: absolute;
   top: 17px;
   right: 20px;
+
+  display: block;
+  // box-sizing: border-box;
+  width: 23px;
+  height: 20px;
+
+  border: none;
+  background-color: inherit;
+
+  // Рисуем бургер
+  border-bottom: 12px double @bg-blue;
+  border-top: 4px solid @bg-blue;
+
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }

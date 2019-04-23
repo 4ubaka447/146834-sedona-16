@@ -3,6 +3,22 @@
 
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+
+    // временно, чтобы нормально отрисовалось,
+    // потом убрать и откорректировать маргинами
+    justify-content: space-between;
+  }
+}
+
+.menu-list__item {
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    padding: 20px 0;
+  }
 }
 
 .menu-list__link {
@@ -24,5 +40,13 @@
   &:active {
     background-color: @bg-blue-active;
     color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (min-width: @tablet-width) {
+    color: @font-black;
+    font-size: 14px;
+    line-height: 26px;
+
+    background-color: white;
   }
 }
