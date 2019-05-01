@@ -1,12 +1,17 @@
 .addition-list {
+  box-sizing: border-box;
   list-style: none;
   margin: 0;
-  padding: 0 20px;
+  padding-top: 34px;
+  padding-left: 69px;
+  padding-right: 20px;
+  padding-bottom: 9px;
 
   @media (min-width: @tablet-width) {
     display: flex;
     width: @tablet-width;
     margin: 0 auto;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -17,7 +22,56 @@
 }
 
 .addition-list__item {
+  position: relative;
   text-align: left;
+  margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+    width: 256px;
+    padding-top: 58px;
+    padding-left: 45px;
+    padding-right: 45px;
+    margin-bottom: 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    width: 400px;
+    padding-top: 58px;
+    padding-left: 55px;
+    padding-right: 55px;
+    margin-bottom: 82px;
+  }
+}
+
+// для наглядности кода
+.addition-list__item:nth-child(1) {
+  order: 0;
+}
+
+.addition-list__item:nth-child(2) {
+  order: 2;
+}
+
+.addition-list__item:nth-child(3) {
+  order: 1;
+}
+
+.addition-list__picture {
+  fill: @bg-blue;
+  position: absolute;
+  top: -8px;
+  left: -48px;
+  width: 38px;
+  height: 38px;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    width: 74px;
+    height: 74px;
+    margin-bottom: 20px;
+  }
 }
 
 .addition-list__title {
@@ -25,8 +79,15 @@
   line-height: 26px;
   font-weight: bold;
   margin: 0;
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    margin-bottom: 20px;
+  }
 }
 
 .addition-list__text {
   margin: 0;
+  line-height: 21px;
 }

@@ -1,11 +1,13 @@
 .main-footer {
   text-align: center;
+  padding-top: 37px;
 
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
     width: @tablet-width;
     margin: 0 auto;
+    margin-bottom: 36px;
   }
 
   @media (min-width: @desktop-width) {
@@ -14,15 +16,22 @@
 }
 
 .main-footer__hashtag {
+  display: block;
   font-size: 21px;
-  padding: 13px 0;
+  margin-bottom: 37px;
 
   @media (min-width: @tablet-width) {
     width: 256px;
+    margin: 0;
+    padding-top: 10px;
+    // почему-то не работает
+    align-items: center;
   }
 
   @media (min-width: @desktop-width) {
+    box-sizing: border-box;
     width: 400px;
+    padding-right: 28px;
   }
 }
 
@@ -37,14 +46,27 @@
 }
 
 .main-footer__copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+
+  line-height: 26px;
   color: inherit;
-  padding: 13px 0;
 
   @media (min-width: @tablet-width) {
     width: 256px;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {
+    box-sizing: border-box;
     width: 400px;
+    padding-left: 34px;
   }
+}
+
+.main-footer__copyright-text {
+  margin-right: 13px;
 }
