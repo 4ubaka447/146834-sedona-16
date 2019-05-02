@@ -27,6 +27,9 @@
 }
 
 .photo__info {
+  padding-bottom: 16px;
+  padding-top: 17px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     align-items: center;
@@ -43,6 +46,10 @@
   }
 }
 
+.photo__info-wrapper {
+  margin-left: 20px;
+}
+
 .photo__caption {
   font-weight: bold;
   margin: 0;
@@ -52,13 +59,28 @@
 .photo__autor {
   text-transform: none;
   margin: 0;
+  margin-bottom: 5px;
   padding: 0;
 }
 
 .photo__like {
   color: inherit;
+  font-weight: bold;
 
   @media (min-width: @tablet-width) {
     margin-left: auto;
+    margin-right: 20px;
   }
+}
+
+.photo__icon {
+  fill: #b2b2b2;
+
+  @media (min-width: @desktop-width) {
+    fill: @font-white;
+  }
+}
+
+.photo__count {
+  margin-left: 11px;
 }

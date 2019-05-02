@@ -17,16 +17,25 @@
   margin: 0;
   padding: 0;
 
+  border-bottom: 1px solid #e5e5e5;
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+
+    border: none;
   }
 }
 
 .photos__item {
+  padding-top: 21px;
+  border-top: 1px solid #e5e5e5;
+
   @media (min-width: @tablet-width) {
     width: 50%;
+    padding: 0;
+    border: none;
   }
 
   @media (min-width: @desktop-width) {

@@ -20,7 +20,7 @@
     @media (min-width: @desktop-width) {
       background-image: url("../img/main-city-desktop@1x.jpg");
       width: 800px;
-      height: auto;
+      background-position: center;
     }
   }
 
@@ -37,12 +37,45 @@
   }
 }
 
-.advantage__wrapper {
+.advantage--mask {
+  position: relative;
+  padding-top: 39px;
+
   @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: block;
+    content: "";
+    width: 100%;
+    height: 10%;
+
+    background-image: url("../img/bg-triangle.svg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.advantage__wrapper {
+  padding-top: 38px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 45px;
     width: 256px;
   }
 
   @media (min-width: @desktop-width) {
+    padding-top: 50px;
     width: 400px;
   }
 }
@@ -67,12 +100,71 @@
 
 .advantage__title {
   margin: 0 20px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    margin: 0 50px;
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 21px;
+    margin: 0 120px;
+    margin-bottom: 9px;
+  }
 }
 
 .advantage__number {
+  position: relative;
+  width: 54px;
   line-height: 21px;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  padding: 0;
+
+  // добавляет полоски справа и слева от номера преимущества
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    left: 0;
+    top: 12px;
+    width: 10px;
+    height: 1px;
+    background-color: @font-white;
+  }
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    right: 0;
+    top: 12px;
+    width: 10px;
+    height: 1px;
+    background-color: @font-white;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 22px;
+  }
 }
 
 .advantage__text {
   margin: 0 20px;
+  margin-bottom: 41px;
+  line-height: 21px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 40px;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 85px;
+    margin-bottom: 60px;
+  }
 }

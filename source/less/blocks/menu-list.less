@@ -7,23 +7,41 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-
-    // временно, чтобы нормально отрисовалось,
-    // потом убрать и откорректировать маргинами
-    justify-content: space-between;
   }
 }
 
+// есть несовпадение в PixelPerfect, но не критично
 .menu-list__item {
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
-    padding: 20px 0;
+    padding: 15px 0;
+    margin: 0 23px;
+    width: 105px;
+  }
+
+  @media (min-width: @desktop-width) {
+    // margin: 0 23px;
+    width: 190px;
+  }
+}
+
+.menu-list__item:nth-child(2) {
+  @media (min-width: @tablet-width) {
+    margin-right: auto;
+  }
+}
+
+.menu-list__item:nth-child(3n) {
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
   }
 }
 
 .menu-list__link {
   display: block;
   box-sizing: border-box;
+
+  padding: 8px 0;
 
   color: @font-white;
   font-size: 18px;
@@ -32,6 +50,9 @@
   text-align: center;
 
   background-color: @bg-blue;
+
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
 
   &:hover {
     background-color: @bg-blue-hover;
@@ -43,10 +64,32 @@
   }
 
   @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+
     color: @font-black;
     font-size: 14px;
     line-height: 26px;
 
     background-color: white;
+    box-shadow: none;
+
+    &:hover {
+      background-color: inherit;
+      color: @bg-blue;
+    }
+
+    &:active {
+      background-color: inherit;
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.menu-list__link--shadow {
+  box-shadow: inset 0 -5px 3px -3px rgba(0, 0, 0, 0.2);
+
+  @media (min-width: @tablet-width) {
+    box-shadow: none;
   }
 }

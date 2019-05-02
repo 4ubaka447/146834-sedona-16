@@ -13,33 +13,28 @@
   text-align: center;
 
   padding-top: 90px;
-  padding-bottom: 85px;
+  padding-bottom: 76px;
 
   @media (min-width: @tablet-width) {
     padding-top: 77px;
-    padding-bottom: 91px;
+    padding-bottom: 84px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 78px;
-    padding-bottom: 90px;
     background-image: url("../img/bg-back-desktop@1x.jpg");
   }
 
   &::after {
     position: absolute;
-    // с таким left и width треугольная маска тянется с глюками
-    // если сделать -2px и 101%, то по ширине нормально,
-    // а низ все равно с глюками
-    // для низа bottom: -1px, почти не заметно, за то нет полосы снизу
     left: 0;
     bottom: 0;
 
     display: block;
     content: "";
     width: 100%;
-    height: 50%;
+    height: 100%;
 
     background-image: url("../img/bg-intro-triangle-mobile.svg");
     background-position: bottom;
@@ -53,5 +48,24 @@
     @media (min-width: @desktop-width) {
       background-image: url("../img/bg-intro-triangle-desktop.svg");
     }
+  }
+}
+
+.header-img__content {
+  @media (min-width: @tablet-width) {
+    width: 460px;
+    height: auto;
+  }
+}
+
+.header-img--small {
+  padding-top: 50px;
+  padding-bottom: 60px;
+  background-position: bottom;
+  background-size: auto;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 95px;
+    padding-bottom: 109px;
   }
 }
