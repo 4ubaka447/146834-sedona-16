@@ -1,4 +1,3 @@
-source/less/normalize.less
 source/less/blocks/control.less
 source/less/blocks/features.less
 source/less/blocks/form-wrapper.less
