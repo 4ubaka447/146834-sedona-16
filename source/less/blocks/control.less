@@ -1,0 +1,102 @@
+.control {
+  @media (min-width: @tablet-width) {
+    position: relative;
+  }
+}
+
+.control__bar-container {
+  box-sizing: border-box;
+  position: relative;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 0 20px;
+  margin-top: -45px;
+  padding: 0 22px;
+  padding-top: 21px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    // (93-45)/2
+    bottom: 24px;
+    // left: 51px;
+    left: 0;
+    // width: 433px;
+    width: 100%;
+    background-color: inherit;
+    padding-left: 72px;
+    padding-right: 185px;
+  }
+}
+
+.control__bar {
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.control__slider {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  top: 18px;
+  left: 60px;
+
+  @media (min-width: @tablet-width) {
+    left: 135px;
+  }
+}
+
+.control__panel {
+  box-sizing: border-box;
+  display: flex;
+  height: 66px;
+  background-color: @bg-gray-photo;
+  margin: 0 20px;
+  padding: 23px;
+
+  @media (min-width: @tablet-width) {
+    height: 93px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 0;
+    margin-top: -93px;
+    padding-top: 36px;
+    padding-bottom: 37px;
+    padding-left: 35px;
+    padding-right: 41px;
+  }
+}
+
+.control__button {
+  fill: @video-controls;
+
+  @media (min-width: @tablet-width) {
+    fill: @font-white;
+  }
+}
+
+.control__button path {
+  fill: @video-controls;
+
+  @media (min-width: @tablet-width) {
+    fill: @font-white;
+  }
+}
+
+.control__button polygon {
+  fill: @video-controls;
+
+  @media (min-width: @tablet-width) {
+    fill: @font-white;
+  }
+}
+
+.control__button--replay {
+  margin-right: auto;
+}
+
+.control__button--subtitles {
+  margin-right: 30px;
+}
