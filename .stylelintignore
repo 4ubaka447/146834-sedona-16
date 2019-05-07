@@ -1,7 +1,4 @@
-source/less/blocks/control.less
 source/less/blocks/features.less
 source/less/blocks/form-wrapper.less
-source/less/blocks/form.less
 source/less/blocks/main-header.less
 source/less/blocks/modal.less
-source/less/blocks/video.less
