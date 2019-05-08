@@ -31,7 +31,12 @@
         <!-- Лого и кнопка бургера -->
         <div class="overt-navigation">
           <a class="overt-navigation__logo" href="index.html">
-            <img src="img/logo-sedona-mobile.svg" alt="Логотип Седона" width="102" height="83">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img class="overt-navigation__img" src="img/logo-sedona-mobile.svg" alt="Логотип Седона" width="102"
+                height="83">
+            </picture>
           </a>
           <button class="overt-navigation__menu-toggle" type="button" name="menu-toggle">
             <span class="visually-hidden">открыть/закрытьменю</span>

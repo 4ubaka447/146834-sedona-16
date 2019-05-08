@@ -1,4 +1,19 @@
+.map {
+  width: @mobile-width;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
+}
+
 .map__img {
   display: block;
   margin: 0 auto;
+  width: 100%;
+  height: auto;
 }
