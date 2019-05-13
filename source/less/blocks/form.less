@@ -48,17 +48,25 @@
     width: 100%;
 
     border-top: 1px solid #e5e5e5;
+
+    margin-bottom: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 53px;
   }
 }
 
 .form__block--impress {
   @media (min-width: @tablet-width) {
     order: 0;
+    margin-bottom: 36px;
   }
 
   @media (min-width: @desktop-width) {
     box-sizing: border-box;
     border-right: 1px solid #e5e5e5;
+    margin-bottom: 66px;
   }
 }
 
@@ -98,6 +106,8 @@
     margin-bottom: 59px;
 
     font-size: 21px;
+
+    text-align: start;
   }
 }
 
@@ -110,13 +120,11 @@
 .form__legend--contacts {
   @media (min-width: @tablet-width) {
     margin: 0 auto;
-    margin-top: 36px;
     margin-bottom: 25px;
     padding: 0 60px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 66px;
     margin-bottom: 74px;
   }
 }
@@ -125,13 +133,9 @@
   @media (min-width: @tablet-width) {
     width: 400px;
     margin: 0 auto;
-    margin-top: 26px;
     margin-bottom: 16px;
     padding: 0 60px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-top: 53px;
+    text-align: center;
   }
 }
 
@@ -262,7 +266,7 @@
     margin: 0;
 
     // сгодится ли для переполнения?
-    margin-right: 72px;
+    margin-right: 71px;
     width: auto;
 
     &:last-child {
@@ -323,6 +327,9 @@
   box-sizing: border-box;
   width: 100%;
   min-width: 80px;
+  // для IE11
+  min-height: 58px;
+
   border: none;
   padding: 16px 23px;
   background-color: @bg-gray-photo;
