@@ -15,7 +15,7 @@
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
     padding: 15px 0;
-    margin: 0 23px;
+    margin: 0 24px;
     width: 105px;
   }
 
@@ -25,15 +25,23 @@
   }
 }
 
-.menu-list__item:nth-child(2) {
+.menu-list__item:nth-child(4n+2) {
   @media (min-width: @tablet-width) {
-    margin-right: auto;
+    margin-right: 13.25%;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 12.25%;
   }
 }
 
-.menu-list__item:nth-child(3n) {
+.menu-list__item:nth-child(4n+3) {
   @media (min-width: @tablet-width) {
-    margin-left: auto;
+    margin-left: 13.25%;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 12.25%;
   }
 }
 

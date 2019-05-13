@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <header class="main-header">
@@ -31,7 +32,12 @@
         <!-- Лого и кнопка бургера -->
         <div class="overt-navigation">
           <a class="overt-navigation__logo" href="index.html">
-            <img src="img/logo-sedona-mobile.svg" alt="Логотип Седона" width="102" height="83">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img class="overt-navigation__img" src="img/logo-sedona-mobile.svg" alt="Логотип Седона" width="102"
+                height="83">
+            </picture>
           </a>
           <button class="overt-navigation__menu-toggle" type="button" name="menu-toggle">
             <span class="visually-hidden">открыть/закрытьменю</span>
@@ -51,7 +57,7 @@
         достопримечательностях</p>
       <section class="form-wrapper">
         <form class="form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="form__block">
+          <fieldset class="form__block form__block--user">
             <legend class="form__legend">Представьтесь:</legend>
             <ul class="form__list">
               <li class="form__item">
@@ -69,72 +75,74 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__block">
-            <legend class="form__legend">Контактная информация:</legend>
-            <ul class="form__list">
+          <fieldset class="form__block form__block--contacts">
+            <legend class="form__legend form__legend--contacts">Контактная информация:</legend>
+            <ul class="form__list form__list--contacts">
               <li class="form__item form__item--contacts form__item--phone">
-                <label class="form__item-name form__item-name--contacts" for="phone">Контактный телефон*:</label>
+                <label class="form__item-name form__item-name--contacts form__item-name--phone" for="phone">Контактный телефон*:</label>
                 <input class="form__item-field" type="tel" name="phone" id="phone" placeholder="Введите телефон">
               </li>
               <li class="form__item form__item--contacts form__item--email">
-                <label class="form__item-name form__item-name--contacts" for="email">Электронная почта*:</label>
+                <label class="form__item-name form__item-name--contacts  form__item-name--email" for="email">Электронная почта*:</label>
                 <input class="form__item-field" type="email" name="email" id="email" placeholder="Введите e-mail">
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__block">
-            <legend class="form__legend">Ваше общее впечатление:</legend>
-            <ul class="form__list">
-              <li class="form__item">
-                <label class="form__radio-name" for="radio-positive">Скорее положительное</label>
+          <fieldset class="form__block form__block--impress">
+            <legend class="form__legend form__legend--impress">Ваше общее впечатление:</legend>
+            <ul class="form__list form__list--radio">
+              <li class="form__item form__item--impress">
                 <input class="form__radio-field visually-hidden" type="radio" name="impress" id="radio-positive"
                   value="positive" checked>
+                <label class="form__radio-name" for="radio-positive">Скорее положительное</label>
               </li>
-              <li class="form__item">
-                <label class="form__radio-name" for="radio-negative">Скорее отрицательное</label>
+              <li class="form__item form__item--impress">
                 <input class="form__radio-field visually-hidden" type="radio" name="impress" id="radio-negative"
                   value="negative">
+                <label class="form__radio-name" for="radio-negative">Скорее отрицательное</label>
               </li>
-              <li class="form__item">
-                <label class="form__radio-name" for="radio-middle">Затрудняюсь ответить</label>
+              <li class="form__item form__item--impress">
                 <input class="form__radio-field visually-hidden" type="radio" name="impress" id="radio-middle"
                   value="middle">
+                <label class="form__radio-name" for="radio-middle">Затрудняюсь ответить</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__block">
-            <legend class="form__legend">Посещенные достопримечательности:</legend>
-            <ul class="form__list">
-              <li class="form__item">
-                <label class="form__checkbox-name" for="checkbox-devil">Мост Дьявола</label>
+          <fieldset class="form__block form__block--sight">
+            <legend class="form__legend  form__legend--sight">Посещенные достопримечательности:</legend>
+            <ul class="form__list form__list--checkbox">
+              <li class="form__item form__item--checkbox">
                 <input class="form__checkbox-field visually-hidden" type="checkbox" name="devil"
                   id="checkbox-devil" checked>
+                <label class="form__checkbox-name" for="checkbox-devil">Мост Дьявола</label>
               </li>
-              <li class="form__item">
-                <label class="form__checkbox-name" for="checkbox-croco">Гора-Колокол</label>
+              <li class="form__item form__item--checkbox">
                 <input class="form__checkbox-field visually-hidden" type="checkbox" name="croco"
                   id="checkbox-croco" checked>
+                <label class="form__checkbox-name" for="checkbox-croco">Гора-Колокол</label>
               </li>
-              <li class="form__item">
-                <label class="form__checkbox-name" for="checkbox-slide">Слайд-парк</label>
+              <li class="form__item form__item--checkbox">
                 <input class="form__checkbox-field visually-hidden" type="checkbox" name="slide"
                   id="checkbox-slide" checked>
+                <label class="form__checkbox-name" for="checkbox-slide">Слайд-парк</label>
               </li>
-              <li class="form__item">
-                <label class="form__checkbox-name" for="checkbox-redrock">Красные скалы</label>
+              <li class="form__item form__item--checkbox">
                 <input class="form__checkbox-field visually-hidden" type="checkbox" name="redrock"
                   id="checkbox-redrock">
+                <label class="form__checkbox-name" for="checkbox-redrock">Красные скалы</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__block">
+          <fieldset class="form__block form__block--comment">
             <p class="form__comment">
               <label class="form__comment-title" for="comment">Опишите свои эмоции:</label>
               <textarea class="form__comment-field" name="comment" id="comment" cols="30" rows="5"
                 placeholder="Опишите подробно все свои восторги"></textarea>
             </p>
           </fieldset>
-          <button class="form__button button" type="submit" name="button">Отправить отзыв</button>
+          <div class="form__button-wrapper">
+            <button class="form__button button" type="submit" name="button">Отправить отзыв</button>
+          </div>
         </form>
       </section>
     </main>
