@@ -1,4 +1,27 @@
 .map {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
+}
+
+.map__iframe {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 350px;
+}
+
+.map__img-wrapper {
   width: @mobile-width;
   margin: 0 auto;
 

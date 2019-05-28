@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="preload" href="fonts/ptsans.woff" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff" as="font">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
     <script src="js/picturefill.min.js" async=""></script>
   </head>
   <body>
@@ -13,186 +17,195 @@
       <include src="build/img/sprite.svg"></include>
     </div>
 
-    <header class="main-header">
-      <!-- Блок навигации по сайту -->
-      <nav class="main-navigation">
-        <!-- Блок для бургера -->
-        <div class="site-menu">
-          <ul class="site-menu__list menu-list">
-            <li class="menu-list__item">
-              <a class="menu-list__link">Главная</a>
+    <div class="wrapper">
+      <header class="main-header">
+        <!-- Блок навигации по сайту -->
+        <nav class="main-navigation">
+          <!-- Блок для бургера -->
+          <div class="site-menu">
+            <ul class="site-menu__list menu-list">
+              <li class="menu-list__item">
+                <a class="menu-list__link">Главная</a>
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="photo.html">Фото и видео</a>
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="form.html">Форма отзыва</a>
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link menu-list__link--shadow" href="https://htmlacademy.ru/intensive/adaptive">
+                  Html academy
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Лого и кнопка бургера -->
+          <div class="overt-navigation">
+            <a class="overt-navigation__logo">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+                <img class="overt-navigation__img" src="img/logo-sedona-mobile.svg" alt="Логотип Седона" width="102"
+                  height="83">
+              </picture>
+            </a>
+            <button class="overt-navigation__menu-toggle" type="button" name="menu-toggle">
+              <span class="visually-hidden">открыть/закрытьменю</span>
+            </button>
+          </div>
+        </nav>
+        <!-- Большая картинка под меню -->
+        <div class="header-img">
+          <img class="header-img__content" src="img/text-sedona-index.svg" alt="Добро пожаловать в великолепную Седону!"
+            width="282" height="214">
+        </div>
+      </header>
+      <!-- Основной контент -->
+      <main class="main-content">
+        <h1 class="main-content__title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
+        <p class="main-content__intro">Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
+        <section class="features">
+          <!-- Большая причина -->
+          <div class="advantage advantage--mask">
+            <div class="advantage__wrapper">
+              <h2 class="advantage__title">Настоящий городок</h2>
+              <p class="advantage__number">№1</p>
+              <p class="advantage__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
+            </div>
+          </div>
+          <!-- Дополнительные фичи -->
+          <ul class="addition-list">
+            <li class="addition-list__item">
+
+              <svg class="addition-list__picture" width="38" height="38" viewBox="0 0 74.695 72.346">
+                <use xlink:href="#icon-house"></use>
+              </svg>
+
+              <h3 class="addition-list__title">Жилье</h3>
+              <p class="addition-list__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="photo.html">Фото и видео</a>
+            <li class="addition-list__item">
+
+              <svg class="addition-list__picture" width="38" height="38" viewBox="0 0 63 75.084">
+                <use xlink:href="#icon-gift"></use>
+              </svg>
+
+              <h3 class="addition-list__title">Сувениры</h3>
+              <p class="addition-list__text">Не только китайского, но и местного производства!</p>
             </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="form.html">Форма отзыва</a>
+            <li class="addition-list__item">
+
+              <svg class="addition-list__picture" width="38" height="38" viewBox="0 0 76.166 68.959">
+                <use xlink:href="#icon-burger"></use>
+              </svg>
+
+              <h3 class="addition-list__title">Еда</h3>
+              <p class="addition-list__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link menu-list__link--shadow" href="https://htmlacademy.ru/intensive/adaptive">
-                Html academy
+          </ul>
+          <!-- Маленькая причина -->
+          <div class="advantage advantage--img">
+            <div class="advantage__wrapper">
+              <h2 class="advantage__title">Там есть Мост дьявола</h2>
+              <p class="advantage__number">№2</p>
+              <p class="advantage__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+            </div>
+          </div>
+          <!-- Остальные причины -->
+          <ul class="minor-list">
+            <li class="minor-list__item">
+              <h2 class="minor-list__title">Небольшая площадь</h2>
+              <p class="minor-list__number">№3</p>
+              <p class="minor-list__text">Все интересные места находятся очень близко</p>
+            </li>
+            <li class="minor-list__item">
+              <h2 class="minor-list__title">Красивая дорога</h2>
+              <p class="minor-list__number">№4</p>
+              <p class="minor-list__text">Ехать в седону из Лас-вегаса совсем не скучно!</p>
+            </li>
+            <li class="minor-list__item">
+              <h2 class="minor-list__title">Мало туристов</h2>
+              <p class="minor-list__number">№5</p>
+              <p class="minor-list__text">Большинство едет в Гранд каньон и толпится там</p>
+            </li>
+          </ul>
+        </section>
+        <!-- Поиск гостиницы -->
+        <section class="hotel-search">
+          <h2 class="visually-hidden">Найти гостницу</h2>
+          <b class="hotel-search__title">Заинтересовались?</b>
+          <p class="hotel-search__text">
+            Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне
+          </p>
+          <a class="hotel-search__button button" href="hotels.html">Найти гостиницу</a>
+        </section>
+        <!-- Карта -->
+        <div class="map">
+          <div class="map__iframe" id="map"></div>
+          <!-- <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab35e9def3b4097e864c5339bd18f5f44d0a8da9003ed3bfa50f8ae040b24f39f&amp;source=constructor" width="100%" height="350" frameborder="0"></iframe> -->
+          <div class="map__img-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.webp 1x,
+                img/bg-map-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x,
+                img/bg-map-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+              <img class="map__img" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Седона,
+                штат Аризона" width="320" height="350">
+            </picture>
+          </div>
+        </div>
+      </main>
+      <!-- Подвал -->
+      <footer class="main-footer">
+        <b class="main-footer__hashtag">#visitsedona</b>
+        <div class="main-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="#">
+                <span class="visually-hidden">Мы в Твиттере</span>
+
+                <svg class="social__link-picture" width="20" height="20" viewBox="0 0 17.5 14.663">
+                  <use xlink:href="#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="#">
+                <span class="visually-hidden">Мы на Фейсбуке</span>
+
+                <svg class="social__link-picture" width="20" height="20" viewBox="0 0 8.672 18.944">
+                  <use xlink:href="#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" href="#">
+                <span class="visually-hidden">Мы на Ютубе</span>
+
+                <svg class="social__link-picture" width="20" height="20" viewBox="0 0 19.979 14.015">
+                  <use xlink:href="#icon-youtube"></use>
+                </svg>
               </a>
             </li>
           </ul>
         </div>
-        <!-- Лого и кнопка бургера -->
-        <div class="overt-navigation">
-          <a class="overt-navigation__logo">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
-              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-              <img class="overt-navigation__img" src="img/logo-sedona-mobile.svg" alt="Логотип Седона" width="102"
-                height="83">
-            </picture>
-          </a>
-          <button class="overt-navigation__menu-toggle" type="button" name="menu-toggle">
-            <span class="visually-hidden">открыть/закрытьменю</span>
-          </button>
-        </div>
-      </nav>
-      <!-- Большая картинка под меню -->
-      <div class="header-img">
-        <img class="header-img__content" src="img/text-sedona-index.svg" alt="Добро пожаловать в великолепную Седону!"
-          width="282" height="214">
-      </div>
-    </header>
-    <!-- Основной контент -->
-    <main class="main-content">
-      <h1 class="main-content__title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
-      <p class="main-content__intro">Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
-      <section class="features">
-        <!-- Большая причина -->
-        <div class="advantage advantage--mask">
-          <div class="advantage__wrapper">
-            <h2 class="advantage__title">Настоящий городок</h2>
-            <p class="advantage__number">№1</p>
-            <p class="advantage__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
-          </div>
-        </div>
-        <!-- Дополнительные фичи -->
-        <ul class="addition-list">
-          <li class="addition-list__item">
+        <a class="main-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="main-footer__copyright-text">Разработано</span>
+          <span class="visually-hidden">Htmlacademy</span>
 
-            <svg class="addition-list__picture" width="38" height="38" viewBox="0 0 74.695 72.346">
-              <use xlink:href="#icon-house"></use>
-            </svg>
+          <svg class="main-footer__copyright-picture" width="27" height="34" viewBox="0 0 26.943 34.09">
+            <use xlink:href="#icon-logo-htmlacademy"></use>
+          </svg>
+        </a>
+      </footer>
+    </div>
 
-            <h3 class="addition-list__title">Жилье</h3>
-            <p class="addition-list__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-          </li>
-          <li class="addition-list__item">
-
-            <svg class="addition-list__picture" width="38" height="38" viewBox="0 0 63 75.084">
-              <use xlink:href="#icon-gift"></use>
-            </svg>
-
-            <h3 class="addition-list__title">Сувениры</h3>
-            <p class="addition-list__text">Не только китайского, но и местного производства!</p>
-          </li>
-          <li class="addition-list__item">
-
-            <svg class="addition-list__picture" width="38" height="38" viewBox="0 0 76.166 68.959">
-              <use xlink:href="#icon-burger"></use>
-            </svg>
-
-            <h3 class="addition-list__title">Еда</h3>
-            <p class="addition-list__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-          </li>
-        </ul>
-        <!-- Маленькая причина -->
-        <div class="advantage advantage--img">
-          <div class="advantage__wrapper">
-            <h2 class="advantage__title">Там есть Мост дьявола</h2>
-            <p class="advantage__number">№2</p>
-            <p class="advantage__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-          </div>
-        </div>
-        <!-- Остальные причины -->
-        <ul class="minor-list">
-          <li class="minor-list__item">
-            <h2 class="minor-list__title">Небольшая площадь</h2>
-            <p class="minor-list__number">№3</p>
-            <p class="minor-list__text">Все интересные места находятся очень близко</p>
-          </li>
-          <li class="minor-list__item">
-            <h2 class="minor-list__title">Красивая дорога</h2>
-            <p class="minor-list__number">№4</p>
-            <p class="minor-list__text">Ехать в седону из Лас-вегаса совсем не скучно!</p>
-          </li>
-          <li class="minor-list__item">
-            <h2 class="minor-list__title">Мало туристов</h2>
-            <p class="minor-list__number">№5</p>
-            <p class="minor-list__text">Большинство едет в Гранд каньон и толпится там</p>
-          </li>
-        </ul>
-      </section>
-      <!-- Поиск гостиницы -->
-      <section class="hotel-search">
-        <h2 class="visually-hidden">Найти гостницу</h2>
-        <b class="hotel-search__title">Заинтересовались?</b>
-        <p class="hotel-search__text">
-          Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне
-        </p>
-        <a class="hotel-search__button button" href="#">Найти гостиницу</a>
-      </section>
-      <!-- Карта -->
-      <div class="map">
-        <picture>
-          <source type="image/webp" media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.webp 1x,
-            img/bg-map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x,
-            img/bg-map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
-
-          <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
-          <img class="map__img" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Седона, штат
-            Аризона" width="320" height="350">
-        </picture>
-      </div>
-    </main>
-    <!-- Подвал -->
-    <footer class="main-footer">
-      <b class="main-footer__hashtag">#visitsedona</b>
-      <div class="main-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--twitter" href="#">
-              <span class="visually-hidden">Мы в Твиттере</span>
-
-              <svg class="social__link-picture" width="20" height="20" viewBox="0 0 17.5 14.663">
-                <use xlink:href="#icon-twitter"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="#">
-              <span class="visually-hidden">Мы на Фейсбуке</span>
-
-              <svg class="social__link-picture" width="20" height="20" viewBox="0 0 8.672 18.944">
-                <use xlink:href="#icon-facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--youtube" href="#">
-              <span class="visually-hidden">Мы на Ютубе</span>
-
-              <svg class="social__link-picture" width="20" height="20" viewBox="0 0 19.979 14.015">
-                <use xlink:href="#icon-youtube"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <a class="main-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
-        <span class="main-footer__copyright-text">Разработано</span>
-        <span class="visually-hidden">Htmlacademy</span>
-
-        <svg class="main-footer__copyright-picture" width="27" height="34" viewBox="0 0 26.943 34.09">
-          <use xlink:href="#icon-logo-htmlacademy"></use>
-        </svg>
-      </a>
-    </footer>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/script.min.js" type="text/javascript"></script>
   </body>
 </html>
